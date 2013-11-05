@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	button#RED Red
+	button#BLUE Blue
+	button#GREEN Green
+	button#OFF OFF
+	script(type='text/javascript')
+		$("#RED").on('click', function(){
+			$.get('/red', function(){
+			});
+		});
+		$("#GREEN").on('click', function(){
+			$.get('/green', function(){
+			});
+		});
+		$("#OFF").on('click', function(){
+			$.get('/off', function(){
+			});
+		});
